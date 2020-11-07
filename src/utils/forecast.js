@@ -10,8 +10,8 @@ const forecast = (latitude, longitude, callback) => {
         } else if(body.error) {
             callback("Unable to get location. Try another search.", undefined);
         } else {
-            callback(undefined, "It is " + body.current.weather_descriptions[0] + ' out there. The temperature is ' 
-            + body.current.temperature + ' degrees out, but it feels like ' 
+            callback(undefined, body.current.weather_descriptions[0] + '. The temperature is ' 
+            + body.current.temperature + ' degrees, but it feels like ' 
             + body.current.feelslike + ' degrees.');
         }
     });
