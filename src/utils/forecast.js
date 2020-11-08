@@ -11,8 +11,8 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to get location. Try another search.", undefined);
         } else {
             callback(undefined, body.current.weather_descriptions[0] + '. The temperature is ' 
-            + body.current.temperature + ' degrees, but it feels like ' 
-            + body.current.feelslike + ' degrees.');
+            + body.current.temperature + ' degrees, and there is ' 
+            + body.current.precip + '% chance of rain.');
         }
     });
 }
